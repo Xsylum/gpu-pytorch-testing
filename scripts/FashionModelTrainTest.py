@@ -4,6 +4,7 @@ from torch.utils.data import DataLoader
 from torchvision import datasets
 from torchvision.transforms import ToTensor
 
+# Setting up Data and NeuralNetwork
 training_data = datasets.FashionMNIST(
         root="data",
         train=True,
@@ -11,12 +12,15 @@ training_data = datasets.FashionMNIST(
         transform=ToTensor()
 )
 
-training_data = datasets.FashionMNIST(
+test_data = datasets.FashionMNIST(
         root="data",
         train=False,
         download=True,
         transform=ToTensor()
 )
+
+train_dataloader = DataLoader(training_data, batch_size=64)
+test_dataloader = DataLoader(test_data, batch_size=64)
 
 class NeuralNetwork(nn.Module):
     def __init__(self):
@@ -77,7 +81,7 @@ def test_loop(dataloader, model, loss_fn):
 # Hyperparameters
 learning_rate = 1e-3
 batch_size = 64
-epochs = 5
+epochs = 75
 
 # Main
 loss_fn = nn.CrossEntropyLoss()

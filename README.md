@@ -35,4 +35,4 @@ After this, a new directory called "data" will have appeared in the top director
 
 ## Executing PyTorch Testing/Training
 
-
+You'll want to run `mkdir models` so that the scripts below have a place to save the newly-trained model
