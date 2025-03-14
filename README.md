@@ -18,7 +18,7 @@ conda activate ./pytorch_environment
 
 With the environment active, the pip packages will now install to the conda packages directory, which [can be changed](https://docs.conda.io/projects/conda/en/latest/user-guide/configuration/custom-env-and-pkg-locations.html) much more easily.
 ```
-pip3 install torch torchvision torchaudio
+pip3 install torch torchvision
 ```
 
 
