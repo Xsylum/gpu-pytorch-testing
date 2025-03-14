@@ -22,4 +22,17 @@ I was having issues installing the packages via Pip due to storage space, even w
 conda install conda-forge::pytorch conda-forge::torchvision
 ```
 
+Again, press `y` and Enter to any prompts during installation. Once the packages are installed, you are ready to run the scripts!
+
+## Running PyTorch offline
+If you are using an offline-computing platform for training/testing the AI (like a segmented HPC for instance), you'll need to pull the dataset ([FashionMNIST](https://pytorch.org/vision/stable/generated/torchvision.datasets.FashionMNIST.html)) from an internet-connected node first.
+
+In the top directory of the repo, run the provided download script for the dataset using:
+```
+python3 scripts/DownloadFashionTrainingData.py
+```
+After this, a new directory called "data" will have appeared in the top directory of the repo, which will house all the data we'll be using for testing/training
+
+## Executing PyTorch Testing/Training
+
 
