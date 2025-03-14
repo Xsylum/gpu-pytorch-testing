@@ -15,10 +15,11 @@ Then, after pressing `y` or Enter through the prompts, activate the environment 
 ```
 conda activate ./pytorch_environment
 ```
+To deactivate the environment you can use `conda deactivate`, but bear in mind the environment will need to be active when installing/using packages (it will need to be activated again if your terminal closes!)
 
-With the environment active, the pip packages will now install to the conda packages directory, which [can be changed](https://docs.conda.io/projects/conda/en/latest/user-guide/configuration/custom-env-and-pkg-locations.html) much more easily.
+I was having issues installing the packages via Pip due to storage space, even with conda managing the downloads. While PyTorch no longer maintains an [Anaconda channel](https://github.com/pytorch/pytorch/issues/138506), but thankfully they do maintain a conda-forge package available [here](https://anaconda.org/conda-forge/pytorch). Pulling from the conda forge package can be done (while your conda environment is active):
 ```
-pip3 install torch torchvision
+conda install conda-forge::pytorch conda-forge::torchvision
 ```
 
 
