@@ -10,3 +10,10 @@ training_data = datasets.FashionMNIST(
     download = True,
     transform = ToTensor()
 )
+
+training_data = datasets.FashionMNIST(
+    root = "data",
+    train = False,
+    download = True,
+    transform = ToTensor()
+)
